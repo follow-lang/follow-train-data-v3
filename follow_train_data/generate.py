@@ -18,7 +18,7 @@ n_futures = 32
 total_memory_count = 0 
 max_memory_size = 2*1024*1024
 max_depth = 2
-min_thm_number = 38000
+min_thm_number = 35000
 max_thm_number = -1
 zip_offset = 106
 

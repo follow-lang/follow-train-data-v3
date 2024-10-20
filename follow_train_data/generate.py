@@ -18,9 +18,9 @@ n_futures = 32
 total_memory_count = 0 
 max_memory_size = 2*1024*1024
 max_depth = 2
-min_thm_number = 0
-max_thm_number = 24000
-zip_offset = 0
+min_thm_number = 24000
+max_thm_number = -1
+zip_offset = 62
 
 def get_folder_size(folder_path):
     total_size = 0
@@ -339,4 +339,6 @@ if __name__ == "__main__":
     
     upload('databases/words.txt') # 上传单词表 
 
+    if max_thm_number < 0:
+        max_thm_number = len(thms)
     run(min_thm_number, max_thm_number, depth=max_depth, batch_size=n_futures)
